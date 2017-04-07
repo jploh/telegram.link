@@ -1,8 +1,18 @@
+# Deprecation Notice
+**Don’t use this for new projects.**  
+**[telegram-mtproto](https://github.com/zerobias/telegram-mtproto) is much more advanced and has a better API.**
 
-# <img src="./telegram.link.png" width="40"/> telegram.link 
+**Also check [treact](https://github.com/goodmind/treact). My attempt to write Telegram client in React.js**
+
+<s><img src="./telegram.link.png" width="40"/> @goodmind/telegram.link</s>
+==========================================================================
 [![npm version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][coverage-image]][coverage-url] [![Climate Status][climate-image]][climate-url] [![Dependency Status][gemnasium-image]][gemnasium-url]
 [![Sauce Test Status][sauce-image]][sauce-url]
 
+
+**ALPHA SOFTWARE**
+
+Contact me in Telegram [@goodmind](https://telegram.me/goodmind)
 
 ###_telegram.link_ is a Telegram API library for
 
@@ -11,6 +21,8 @@
 - **Desktop Web Apps** (standard HTML5 browsers)
 
 - **Server-side Apps**  (i.e. a Command-Line Interface) 
+
+- **Desktop Apps**  (i.e. as third party module using the [NW.js](https://github.com/nwjs/nw.js) runtime) 
 
 **telegram.link** is an unofficial **porting in javascript** of the [Telegram Application Programming Interface](https://core.telegram.org/api).
  
@@ -29,33 +41,37 @@ As soon as a new feature will be available in **telegram.link** it will be explo
 
 ## Project Status
 
+
 - [Creating an Authorization Key](https://core.telegram.org/mtproto/auth_key): completed
 
 - [User Autorization](https://core.telegram.org/api/auth): completed
 
-- Contact and update management, message exchange : ongoing
+- user-contact/update-message management, message exchange: completed
+
+- Starts the [ALPHA](https://en.wikipedia.org/wiki/Software_release_life_cycle#Alpha) phase.
+
+_See the project status page on the [wiki](https://github.com/enricostara/telegram.link/wiki/Project-Status) for the last notes._
+
 
 
 ## Documentation
 
-The api documentation is generated under the _doc/_ folder, you can browse it here:
+The api documentation is generated under the _doc/_ folder.
 
-- [main module](https://rawgit.com/enricostara/telegram.link/master/doc/telegram.link.html)
-
-- [auth module](https://rawgit.com/enricostara/telegram.link/master/doc/auth.html)
+_See the documentation page on the [wiki](https://github.com/enricostara/telegram.link/wiki/Docs)._
 
 
 ## Project Architecture
 
 The whole library is split in **three projects**:
   
-- **telegram.link** (this library): is the main project and provides the **highest-level interface** to communicate with the Telegram data-center. 
+- **@goodmind/telegram.link** (this library): is the main project and provides the **highest-level interface** to communicate with the Telegram data-center. 
 When you write your **_'telegram-like-app'_** you should deal only with this module.
 
-- [**telegram-mt-node**](https://github.com/enricostara/telegram-mt-node) (dependency): implements the **Telegram Mobile Protocol** [(MTProto)](https://core.telegram.org/mtproto),
+- [**@goodmind/telegram-mt-node**](https://github.com/goodmind/telegram-mt-node) (dependency): implements the **Telegram Mobile Protocol** [(MTProto)](https://core.telegram.org/mtproto),
 the protocol level to establish a secure communication with the Telegram cloud.
 
-- [**telegram-tl-node**](https://github.com/enricostara/telegram-tl-node) (dependency): implements the core [**TypeLanguage types**](https://core.telegram.org/mtproto/TL) and 
+- [**@goodmind/telegram-tl-node**](https://github.com/goodmind/telegram-tl-node) (dependency): implements the core [**TypeLanguage types**](https://core.telegram.org/mtproto/TL) and 
 a **TypeBuilder** class that writes **Type classes and functions** in pure javascript parsing TypeLanguage [schemas](https://core.telegram.org/schema). 
 TypeLanguage types represent the **building blocks of the Telegram protocol**.
 
@@ -74,7 +90,7 @@ browserify-transform to rewrites the require() for browser.
 
 To get the complete package:
 ```bash
-$ git clone --branch=master git://github.com/enricostara/telegram.link.git
+$ git clone --branch=master git://github.com/goodmind/telegram.link.git
 $ cd telegram.link
 $ npm install
 ```
@@ -82,7 +98,7 @@ $ npm install
 To install the library as dependency for your app (no tests, no docs, no dev files.. only pure code!):
 ```bash
 $ cd YourApp
-$ npm install --save telegram.link
+$ npm install --save @goodmind/telegram.link
 ```
 
 
@@ -119,11 +135,11 @@ Logo crafted by [Diego Pasquali](http://dribbble.com/diegopq)
 The project is released under the [MIT license](./LICENSE) 
 
 
-[npm-url]: https://www.npmjs.org/package/telegram.link
-[npm-image]: https://badge.fury.io/js/telegram.link.svg
+[npm-url]: https://www.npmjs.org/package/@goodmind/telegram.link
+[npm-image]: https://badge.fury.io/js/%40goodmind%2Ftelegram.link.svg
 
-[travis-url]: https://travis-ci.org/enricostara/telegram.link
-[travis-image]: https://travis-ci.org/enricostara/telegram.link.svg?branch=master
+[travis-url]: https://travis-ci.org/goodmind/telegram.link
+[travis-image]: https://travis-ci.org/goodmind/telegram.link.svg?branch=master
 
 [climate-url]: https://codeclimate.com/github/enricostara/telegram.link
 [climate-image]: https://codeclimate.com/github/enricostara/telegram.link/badges/gpa.svg
